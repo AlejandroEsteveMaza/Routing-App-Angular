@@ -11,7 +11,7 @@
     <tbody>
         <tr>
             <th scope="row">1</th>
-            <td>Josito</td>
+            <td>{{nombre}}</td>
             <td>Otto</td>
             <td>@mdo</td>
         </tr>
@@ -29,5 +29,11 @@
         </tr>
     </tbody>
 </table>
-<button [routerLink]="['']" class="btn-dark">
+
+<div>
+    <input type="text" class="form-control"  placeholder="introduce nombre" [(ngModel)]="nombre">
+    <!-- <button type="button" class="btn btn-dark" (click)="changeName()">Add name</button> -->
+</div>
+
+<button [routerLink]="['']" class="btn-dark  mt-2">
     <-</button>

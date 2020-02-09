@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProveedoresComponent implements OnInit {
 
-  constructor() { }
+  public nombre : string;
+  constructor() { 
+    this.nombre = "Josito1";
+  }
 
   ngOnInit() {
   }
 
+  /* changeName(){
+    this.nombre = this.nombre;
+  } */
 }
