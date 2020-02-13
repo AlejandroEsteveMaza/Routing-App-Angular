@@ -1,3 +1,4 @@
+import { MostrarNavService } from './../mostrar-nav.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mostrarHeader: MostrarNavService) { }
 
   ngOnInit() {
+    
+  }
+  changeMostrarNav() {   
+    this.mostrarHeader.setMostratNav();
+    console.log(this.mostrarHeader.getMostratNav());
   }
 
-  
+
 
 }
