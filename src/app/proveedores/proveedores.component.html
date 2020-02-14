@@ -1,4 +1,3 @@
-
 <table class="table table-striped table-dark mt-5">
     <thead>
         <tr>
@@ -8,32 +7,20 @@
             <th scope="col">Handle</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor='let proveedor of proveedores'>
         <tr>
-            <th scope="row">1</th>
-            <td>{{nombre}}</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <th scope="row">{{ proveedor.id}}</th>
+            <td>{{ proveedor.nombre}}</td>
+            <td>{{ proveedor.apellidos}}</td>
+            <td>{{ proveedor.cosa}}</td>
         </tr>
     </tbody>
 </table>
 
 <div>
-    <input type="text" class="form-control"  placeholder="introduce nombre" [(ngModel)]="nombre">
-    <!-- <button type="button" class="btn btn-dark" (click)="changeName()">Add name</button> -->
+    <input type="text" class="form-control" placeholder="introduce nombre" [(ngModel)]="nombre1">
+    <button type="button" class="btn btn-dark" (click)="changeName()">Cambiar nombre 1</button>
 </div>
 
 <button [routerLink]="['']" class="btn-dark  mt-2">
-    <-</button>
+    <-< /button>
