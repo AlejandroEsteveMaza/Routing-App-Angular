@@ -11,8 +11,13 @@ export class ProveedoresComponent implements OnInit {
 
   public proveedores: Array<Proveedores>;
   public nombre1: string;
+  public verFormularioModificar: boolean;
+  private idPro: number;
+  private nombrePro: string;
+  private apellidosPro: string;
+  private cosasPro: string;
   constructor() {
-    this.nombre1 = "Josito1";
+
     this.proveedores = [
       { id: 0, nombre: 'Freddie', apellidos: 'Mercury', cosa: 'Londres' },
       { id: 1, nombre: 'Eric', apellidos: 'Clapton', cosa: 'Londres' },
@@ -20,14 +25,38 @@ export class ProveedoresComponent implements OnInit {
       { id: 3, nombre: 'Adam', apellidos: 'Lambert', cosa: 'Los Angeles' },
       { id: 4, nombre: 'Robert', apellidos: 'Plant', cosa: 'London' }
     ];
+    this.nombre1 = this.proveedores[1].nombre;
+    this.verFormularioModificar = false;
 
   }
 
   ngOnInit() {
   }
 
-  changeName(){
-    this.nombre1 = this.nombre1;
-    this.proveedores.splice(1, 1, this.nombre1);
-  } 
+  changeName() {
+
+    for (var i in this.proveedores) {
+      if (this.proveedores[i].id == 1) {
+        this.proveedores[i].nombre = this.nombre1;
+        break;
+      }
+    }
+  }
+
+
+  mostrarFormulario(id) {
+    this.verFormularioModificar = true;
+    this.idPro = this.proveedores[id].id;
+    this.nombrePro = this.proveedores[id].nombre;
+    this.apellidosPro = this.proveedores[id].apellidos;
+    this.cosasPro = this.proveedores[id].cosa;
+  }
+
+  modificarProveedor() {
+    
+    this.proveedores[this.idPro].nombre = this.nombrePro;
+    this.proveedores[this.idPro].apellidos = this.apellidosPro;
+    this.proveedores[this.idPro].cosa = this.cosasPro;
+    this.verFormularioModificar = false;
+  }
 }

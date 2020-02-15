@@ -1,4 +1,4 @@
-import { MostrarNavService } from './../mostrar-nav.service';
+import { MostrarNavService } from '../servicios/mostrar-nav.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -15,6 +15,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.mostrarNav = this.mostrarHeaderService.getMostratNav();
+  }
+
+  changeMostrarNav(){
+    this.mostrarHeaderService.setMostratNav();
   }
 
  

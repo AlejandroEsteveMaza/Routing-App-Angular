@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HeaderComponent } from './header/header.component';
+import { TablaProveedoresComponent } from './proveedoresServicio/tabla-proveedores/tabla-proveedores.component';
+import { FormularioProveedoresComponent } from './proveedoresServicio/formulario-proveedores/formulario-proveedores.component';
+import { DetailProveedoresComponent } from './proveedoresServicio/detail-proveedores/detail-proveedores.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProveedoresComponent,
     InicioComponent,
-    HeaderComponent
+    HeaderComponent,
+    TablaProveedoresComponent,
+    FormularioProveedoresComponent,
+    DetailProveedoresComponent
   ],
   imports: [
     BrowserModule,

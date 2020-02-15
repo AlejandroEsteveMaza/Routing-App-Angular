@@ -1,0 +1,24 @@
+<h3>Lista Proveedores</h3>
+
+<table class="table table-striped table-dark mt-5">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody *ngFor='let proveedor of proveedoresServicio'>
+        <tr>
+            <th scope="row">{{ proveedor.id}}</th>
+            <td>{{ proveedor.nombre}}</td>
+            <td>{{ proveedor.apellidos}}</td>
+            <td>{{ proveedor.cosa}}</td>
+            <td> <button type="button" class="btn btn-dark" (click)="verProveedor(proveedor.id)">Navegar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<app-formulario-proveedores></app-formulario-proveedores>

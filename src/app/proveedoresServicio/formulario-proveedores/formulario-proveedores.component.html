@@ -1,0 +1,32 @@
+<div >
+    <div class="d-flex justify-content-center">
+        <h3>Añadir</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+        <table>
+            <tr>
+                <td>ID: </td>
+                <td><input type="text" class="form-control" [(ngModel)]="idPro" [placeholder]="idProveedor">
+                </td>
+            </tr>
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" class="form-control" [(ngModel)]="nombrePro" [placeholder]="nombreProveedor">
+                </td>
+            </tr>
+            <tr>
+                <td>Apellidos: </td>
+                <td><input type="text" class="form-control" [(ngModel)]="apellidosPro" [placeholder]="apellidoProveedor">
+                </td>
+            </tr>
+            <tr>
+                <td>Ciudad: </td>
+                <td><input type="text" class="form-control" [(ngModel)]="cosasPro" [placeholder]="ciudadProveedor">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-primary m-3" (click)="addProveedor()"> Anyadir proveedor </button>
+    </div>
+</div>
