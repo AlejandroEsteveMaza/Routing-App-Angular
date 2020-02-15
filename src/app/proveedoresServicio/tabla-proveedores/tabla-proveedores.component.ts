@@ -9,12 +9,17 @@ import { Router } from '@angular/router';
 })
 export class TablaProveedoresComponent implements OnInit {
   proveedoresServicio: any;
-
+  mostrarFormulario : boolean;
   constructor(private ProveedoresService: ProveedoresService, private router:Router) { 
     this.proveedoresServicio = this.ProveedoresService.getProveedores();
+    this.mostrarFormulario = true;
   }
 
   ngOnInit() {
+  }
+
+  verFormulario(){
+    this.mostrarFormulario = !this.mostrarFormulario;
   }
 
   verProveedor(id){

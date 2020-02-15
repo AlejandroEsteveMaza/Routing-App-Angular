@@ -1,0 +1,3 @@
+<p>Mensaje que llega desde hijo: {{mensajePadre}}</p>
+
+<app-hijo-proveedores (hijoEvent)="mensajePadre=$event" [parentData]="nombre"></app-hijo-proveedores>

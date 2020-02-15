@@ -1,3 +1,4 @@
+import { PadreProveedoresComponent } from './proveedoresPadreHijo/padre-proveedores/padre-proveedores.component';
 import { DetailProveedoresComponent } from './proveedoresServicio/detail-proveedores/detail-proveedores.component';
 import { TablaProveedoresComponent } from './proveedoresServicio/tabla-proveedores/tabla-proveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: '', component: InicioComponent},
   { path: 'proveedores', component: ProveedoresComponent},
   { path: 'services-proveedores', component: TablaProveedoresComponent},
-  { path: 'services-proveedores/:id', component: DetailProveedoresComponent}
+  { path: 'services-proveedores/:id', component: DetailProveedoresComponent},
+  { path: 'padre-hijo', component: PadreProveedoresComponent}
 ];
 
 @NgModule({

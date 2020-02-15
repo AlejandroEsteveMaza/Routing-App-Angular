@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { TablaProveedoresComponent } from './proveedoresServicio/tabla-proveedores/tabla-proveedores.component';
 import { FormularioProveedoresComponent } from './proveedoresServicio/formulario-proveedores/formulario-proveedores.component';
 import { DetailProveedoresComponent } from './proveedoresServicio/detail-proveedores/detail-proveedores.component';
+import { PadreProveedoresComponent } from './proveedoresPadreHijo/padre-proveedores/padre-proveedores.component';
+import { HijoProveedoresComponent } from './proveedoresPadreHijo/hijo-proveedores/hijo-proveedores.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DetailProveedoresComponent } from './proveedoresServicio/detail-proveed
     HeaderComponent,
     TablaProveedoresComponent,
     FormularioProveedoresComponent,
-    DetailProveedoresComponent
+    DetailProveedoresComponent,
+    PadreProveedoresComponent,
+    HijoProveedoresComponent
   ],
   imports: [
     BrowserModule,

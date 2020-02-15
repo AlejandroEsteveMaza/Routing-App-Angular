@@ -20,5 +20,5 @@
         </tr>
     </tbody>
 </table>
-
-<app-formulario-proveedores></app-formulario-proveedores>
+<button type="button" class="btn btn-dark" (click)="verFormulario()">Ver Formulario</button>
+<app-formulario-proveedores *ngIf = "mostrarFormulario"></app-formulario-proveedores>
