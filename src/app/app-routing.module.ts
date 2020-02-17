@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'proveedores', component: ProveedoresComponent},
   { path: 'services-proveedores', component: TablaProveedoresComponent},
   { path: 'services-proveedores/:id', component: DetailProveedoresComponent},
-  { path: 'padre-hijo', component: PadreProveedoresComponent}
+  { path: 'padre-hijo', component: PadreProveedoresComponent},
+  { path: '**', component: InicioComponent},
 ];
 
 @NgModule({
