@@ -1,3 +1,4 @@
+import { ProveedorInt } from './../modelos/proveedor-int';
 import { Proveedores } from './../modelos/proveedores.modelo';
 import { Injectable } from '@angular/core';
 
@@ -5,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProveedoresService {
-  public proveedores: Array<Proveedores>;
+  public proveedores: Array<ProveedorInt>;
   
   constructor() {
     this.proveedores = [
